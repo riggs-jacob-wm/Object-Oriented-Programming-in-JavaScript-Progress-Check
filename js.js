@@ -103,18 +103,34 @@ Taco.prototype.displayFoodInfo = function() {
 
 //Making a function to set values to classes and subclasses.
 function main(){
-    var food1 = new Food("Spaghetti", "Italy", "Hot", 4);
-    food1.displayFoodInfo();
+    //OLD WAY OF DISPLAYING OBJECTS
+    //var food1 = new Food("Spaghetti", "Italy", "Hot", 4);
+    //food1.displayFoodInfo();
+    //
+    //var sushi1 = new Sushi("California Roll", "Japan", "Cold", 8, false);
+    //sushi1.displayFoodInfo();
+    //
+    //var pizza1 = new Pizza("Meat Lovers Pizza", "Italy", "Hot", 6, 7);
+    //pizza1.displayFoodInfo();
+    //
+    //var hotDog1 = new hotDog("100% Beef Dog", "America", "Hot", 12, "Gourmet Sesame Seed Buns");
+    //hotDog1.displayFoodInfo();
+    //
+    //var taco1 = new Taco("Beef Taco", "Mexico", "Hot", 10, "Both");
+    //taco1.displayFoodInfo();
 
-    var sushi1 = new Sushi("California Roll", "Japan", "Cold", 8, false);
-    sushi1.displayFoodInfo();
+    //Making an array to hold our objects
+    var foodArray = [];
 
-    var pizza1 = new Pizza("Meat Lovers Pizza", "Italy", "Hot", 6, 7);
-    pizza1.displayFoodInfo();
+    //Inserting the values into the objects.
+    foodArray[0] = new Food("Spaghetti", "Italy", "Hot", 4);
+    foodArray[1] = new Sushi("California Roll", "Japan", "Cold", 8, false);
+    foodArray[2] = new Pizza("Meat Lovers Pizza", "Italy", "Hot", 6, 7);
+    foodArray[3] = new hotDog("100% Beef Dog", "America", "Hot", 12, "Gourmet Sesame Seed Buns");
+    foodArray[4] =  new Taco("Beef Taco", "Mexico", "Hot", 10, "Both");
 
-    var hotDog1 = new hotDog("100% Beef Dog", "America", "Hot", 12, "Gourmet Sesame Seed Buns");
-    hotDog1.displayFoodInfo();
-
-    var taco1 = new Taco("Beef Taco", "Mexico", "Hot", 10, "Both");
-    taco1.displayFoodInfo();
+    //For loop to display the objects.
+    for (var i = 0; i<foodArray.length; i++ ) {
+        foodArray[i].displayFoodInfo();
+    }
 }
